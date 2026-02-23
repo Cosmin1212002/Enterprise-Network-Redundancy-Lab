@@ -35,7 +35,7 @@ Proiectul utilizează modelul ierarhic Cisco (Core-Access) pentru a asigura o ge
 * Security Check: Departamentul HR nu poate accesa rețeaua IT (confirmat prin ACL logs).
 * Connectivity: Tracert complet de la orice host până la adresa IP externă (Internet).
 
-##Cum se utilizează
+## Cum se utilizează
 1. Descarcă fișierul `.pkt`.
 2. Deschide-l în **Cisco Packet Tracer **.
 3. Credențiale SSH: `Username: admin | Password: cisco`.
