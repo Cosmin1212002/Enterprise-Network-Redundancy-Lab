@@ -1,17 +1,17 @@
 # Enterprise High-Availability Network Design 
 
-##Prezentare Generală
+## Prezentare Generală
 Acest proiect simulează o infrastructură de rețea enterprise completă, proiectată să susțină operațiunile unei companii medii. Accentul principal este pus pe redundantă (High Availability), scalabilitate și securitate cibernetică la nivel de Layer 2 și Layer 3.
 
 
-##Arhitectura Rețelei (Design Ierarhic)
+## Arhitectura Rețelei (Design Ierarhic)
 Proiectul utilizează modelul ierarhic Cisco (Core-Access) pentru a asigura o gestionare eficientă a traficului:
 -Edge Layer: Un router Cisco 4321 care gestionează ieșirea către ISP, NAT și rutarea externă.
 -Core Layer: Două switch-uri Multilayer 3650 configurate în mod redundant.
 -Access Layer: Switch-uri Layer 2 unde sunt conectate stațiile de lucru, segmentate pe departamente.
 
 
-##Detalii Tehnice și Implementare
+## Detalii Tehnice și Implementare
 1. Switching & Redundanță L2
 -VLAN Segmentation: Rețeaua este divizată în 3 segmente logice: IT (VLAN 10), Sales (VLAN 20) și HR (VLAN 30).
 -LACP EtherChannel: Agregarea a două link-uri Gigabit între switch-urile Core pentru a dubla lățimea de bandă și a asigura redundanța link-ului.
@@ -31,9 +31,9 @@ Proiectul utilizează modelul ierarhic Cisco (Core-Access) pentru a asigura o ge
 
 
 ## Teste de Funcționare
-* Failover Test: Rețeaua rămâne activă și ping-ul continuă chiar dacă unul dintre switch-urile Core este oprit.
-* Security Check: Departamentul HR nu poate accesa rețeaua IT (confirmat prin ACL logs).
-* Connectivity: Tracert complet de la orice host până la adresa IP externă (Internet).
+Failover Test: Rețeaua rămâne activă și ping-ul continuă chiar dacă unul dintre switch-urile Core este oprit.
+Security Check: Departamentul HR nu poate accesa rețeaua IT (confirmat prin ACL logs).
+Connectivity: Tracert complet de la orice host până la adresa IP externă (Internet).
 
 ##Cum se utilizează
 1. Descarcă fișierul `.pkt`.
